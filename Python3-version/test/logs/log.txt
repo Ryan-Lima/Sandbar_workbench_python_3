@@ -1,0 +1,96 @@
+2020-12-18 13:47:50 DEBUG    [Program        ] 'Config file'
+              {'AnalysisBins': <Element 'AnalysisBins' at 0x0000025AFA0CE090>,
+               'AnalysisFolder': './test',
+               'BinnedResults': 'results_binned.csv',
+               'CSVCellSize': 1.0,
+               'CompExtentShpPath': './test/ComputationExtents.shp',
+               'ElevationBenchmark': 8000.0,
+               'ElevationIncrement': 0.1,
+               'GDALWarp': 'C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe',
+               'IncrementalResults': 'results_incremental.csv',
+               'Log': 'log.xml',
+               'MetaData': <Element 'MetaData' at 0x0000025AFA0C3590>,
+               'RasterCellSize': 0.25,
+               'ReUseRasters': False,
+               'ResampleMethod': 'linear',
+               'SectionTypes': <Element 'SectionTypes' at 0x0000025AFA0C3E00>,
+               'Sites': <Element 'Sites' at 0x0000025AFA0CE1D0>,
+               'TopLevelFolder': './test/corgrids',
+               'srsEPSG': 'PROJCS["NAD_1983_2011_StatePlane_Arizona_Central_FIPS_0202",GEOGCS["GCS_NAD_1983_2011",DATUM["NAD_1983_2011",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["false_easting",213360.0],PARAMETER["false_northing",0.0],PARAMETER["central_meridian",-111.9166666666667],PARAMETER["scale_factor",0.9999],PARAMETER["latitude_of_origin",31.0],UNIT["Meter",1.0]]'}
+2020-12-18 13:47:51 INFO     [Program        ] Starting Sandbar script with: input_xml: ./test/input.xml
+2020-12-18 13:47:53 INFO     [Load Sections  ] 4 section types loaded from the input XML file.
+2020-12-18 13:47:54 INFO     [Load Bins      ] 3 analysis bins loaded from the input XML file.
+2020-12-18 13:47:55 DEBUG    [Load Bins      ] 'Analysis Bins:'
+              {1: AnalysisBin: 1 - Below 8K lower: None upper: 8000.0,
+               2: AnalysisBin: 2 - 8k to 25k lower: 8000.0 upper: 25000.0,
+               3: AnalysisBin: 3 - Above 25k lower: 25000.0 upper: None}
+              'original Element:'
+              <Element 'AnalysisBins' at 0x0000025AFA0CE090>
+2020-12-18 13:47:57 INFO     [Load Sandbars  ] 1 sandbar sites loaded from input XML.
+2020-12-18 13:47:58 INFO     [Load Sandbars  ] 3 total surveys loaded from the input XML. 3 for analysis and 3 for minimum surface.
+2020-12-18 13:48:02 DEBUG    [Comp. Extents  ] ('Found SRS: PROJCS["NAD83(2011) / Arizona '
+               'Central",GEOGCS["NAD83(2011)",DATUM["NAD83_National_Spatial_Reference_System_2011",SPHEROID["GRS '
+               '1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","1116"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","6318"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",31],PARAMETER["central_meridian",-111.916666666667],PARAMETER["scale_factor",0.9999],PARAMETER["false_easting",213360],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","6404"]]')
+2020-12-18 13:48:03 INFO     [Comp. Extents  ] Computational boundaries polygon ShapeFile loaded containing 95 features.
+2020-12-18 13:48:04 INFO     [Comp. Extents  ] Computation extents ShapeFile confirmed to contain at least one polygon for all 1 sandbar site(s) loaded.
+2020-12-18 13:48:05 INFO     [Raster Prep    ] Site 0003L: Starting raster preparation...
+2020-12-18 13:48:10 DEBUG    [unionCSVExtents] ('Uncorrected extent for 3 delimited files is (240079.0, 240119.0, 647862.0, '
+               '647958.0)')
+2020-12-18 13:48:11 DEBUG    [unionCSVExtents] ('Corrected extent for 3 delimited files is (240068.5, 240129.5, 647851.5, '
+               '647968.5)')
+2020-12-18 13:48:12 INFO     [Sandbar Site   ] Site 0003L: Unioned extent for 3 surveys is (240068.5, 240129.5, 647851.5, 647968.5)
+2020-12-18 13:48:13 INFO     [Sandbar Site   ] Site 0003L: Generating 3 rasters with 61 cols, 117 rows at 0.25m cell size...
+2020-12-18 13:48:15 DEBUG    [Raster         ] 'Resampling original data from 1.0m to 0.25m using linear method'
+2020-12-18 13:48:16 DEBUG    [Raster         ] 'Successfully Resampled Raster'
+2020-12-18 13:48:21 DEBUG    [Delete Raster  ] ('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Unclipped\\0003L_20191005_dem.tif')
+2020-12-18 13:48:22 DEBUG    [Raster         ] 'Finished Writing Raster: ./test\\0003L\\DEMs_Unclipped\\0003L_20191005_dem.tif'
+2020-12-18 13:48:25 DEBUG    [Raster         ] 'Resampling original data from 1.0m to 0.25m using linear method'
+2020-12-18 13:48:26 DEBUG    [Raster         ] 'Successfully Resampled Raster'
+2020-12-18 13:48:31 DEBUG    [Delete Raster  ] ('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Unclipped\\0003L_20180926_dem.tif')
+2020-12-18 13:48:33 DEBUG    [Raster         ] 'Finished Writing Raster: ./test\\0003L\\DEMs_Unclipped\\0003L_20180926_dem.tif'
+2020-12-18 13:48:35 DEBUG    [Raster         ] 'Resampling original data from 1.0m to 0.25m using linear method'
+2020-12-18 13:48:37 DEBUG    [Raster         ] 'Successfully Resampled Raster'
+2020-12-18 13:48:42 DEBUG    [Delete Raster  ] ('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Unclipped\\0003L_20170930_dem.tif')
+2020-12-18 13:48:43 DEBUG    [Raster         ] 'Finished Writing Raster: ./test\\0003L\\DEMs_Unclipped\\0003L_20170930_dem.tif'
+2020-12-18 13:48:50 DEBUG    [Delete Raster  ] 'Raster Successfully Deleted: ./test\\0003L\\0003L_min_surface.tif'
+2020-12-18 13:48:51 DEBUG    [Raster         ] 'Finished Writing Raster: ./test\\0003L\\0003L_min_surface.tif'
+2020-12-18 13:48:58 DEBUG    [Delete Raster  ] ('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20191005_Eddy_Single_dem.tif')
+2020-12-18 13:48:58 DEBUG    [Clip Raster    ] ('RUNNING GdalWarp: '
+               'C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe '
+               '-cutline ./test/ComputationExtents.shp -cwhere "("Site" =\'0003L\')  AND '
+               '("Section"=\'Eddy\')" ./test\\0003L\\DEMs_Unclipped\\0003L_20191005_dem.tif '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20191005_Eddy_Single_dem.tif')
+2020-12-18 13:49:11 DEBUG    [Delete Raster  ] ('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20180926_Eddy_Single_dem.tif')
+2020-12-18 13:49:12 DEBUG    [Clip Raster    ] ('RUNNING GdalWarp: '
+               'C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe '
+               '-cutline ./test/ComputationExtents.shp -cwhere "("Site" =\'0003L\')  AND '
+               '("Section"=\'Eddy\')" ./test\\0003L\\DEMs_Unclipped\\0003L_20180926_dem.tif '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20180926_Eddy_Single_dem.tif')
+2020-12-18 13:49:22 DEBUG    [Delete Raster  ] ('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20170930_Eddy_Single_dem.tif')
+2020-12-18 13:49:23 DEBUG    [Clip Raster    ] ('RUNNING GdalWarp: '
+               'C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe '
+               '-cutline ./test/ComputationExtents.shp -cwhere "("Site" =\'0003L\')  AND '
+               '("Section"=\'Eddy\')" ./test\\0003L\\DEMs_Unclipped\\0003L_20170930_dem.tif '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20170930_Eddy_Single_dem.tif')
+2020-12-18 13:49:27 INFO     [Sandbar Site   ] Site 0003L: Clipped 3 rasters across 3 surveys and 3 sections defined
+2020-12-18 13:49:28 INFO     [Raster Prep    ] Site 0003L: Raster preparation is complete. Elevation at 8K is 920.820 and 25K is 922.930
+2020-12-18 13:49:29 INFO     [Raster Prep    ] Raster preparation is complete for all 1 sites.
+2020-12-18 13:49:30 INFO     [Inc. Analysis  ] Starting incremental analysis...
+2020-12-18 13:49:31 INFO     [Inc. Analysis  ] Incremental analysis on site 0003L with 3 surveys.
+2020-12-18 13:49:32 DEBUG    [Inc. Analysis  ] ('Incremental on site 0003L, survey 2019-10-05, Eddy - Single '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20191005_Eddy_Single_dem.tif')
+2020-12-18 13:49:38 DEBUG    [Inc. Analysis  ] ('Incremental on site 0003L, survey 2018-09-26, Eddy - Single '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20180926_Eddy_Single_dem.tif')
+2020-12-18 13:49:40 DEBUG    [Inc. Analysis  ] ('Incremental on site 0003L, survey 2017-09-30, Eddy - Single '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20170930_Eddy_Single_dem.tif')
+2020-12-18 13:49:43 INFO     [Inc. Analysis  ] Incremental analysis complete. Writing 137 results to ./test\results_incremental.csv
+2020-12-18 13:49:45 INFO     [Binned Analysis] Starting binned analysis...
+2020-12-18 13:49:46 INFO     [Binned Analysis] Binned analysis on site 0003L with 3 surveys.
+2020-12-18 13:49:48 INFO     [Binned Analysis] Binned analysis complete. Writing 9 results to ./test\results_binned.csv
+2020-12-18 13:49:50 INFO     [Initializing   ] Sandbar analysis process complete.

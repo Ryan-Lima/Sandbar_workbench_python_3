@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<SandbarAnalysis>
+  <MetaData>
+    <Meta Name="date">2020-11-23T23:31:14.5419675-07:00</Meta>
+    <Meta Name="system">testing</Meta>
+    <Meta Name="user">testing</Meta>
+    <Meta Name="version">1</Meta>
+  </MetaData>
+  <Outputs>
+    <Log>log.xml</Log>
+    <BinnedResults>results_binned.csv</BinnedResults>
+    <IncrementalResults>results_incremental.csv</IncrementalResults>
+  </Outputs>
+  <Inputs>
+    <TopLevelFolder>./test/corgrids</TopLevelFolder>
+    <CompExtentShpPath>./test/ComputationExtents.shp</CompExtentShpPath>
+    <srsEPSG>PROJCS["NAD_1983_2011_StatePlane_Arizona_Central_FIPS_0202",GEOGCS["GCS_NAD_1983_2011",DATUM["NAD_1983_2011",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["false_easting",213360.0],PARAMETER["false_northing",0.0],PARAMETER["central_meridian",-111.9166666666667],PARAMETER["scale_factor",0.9999],PARAMETER["latitude_of_origin",31.0],UNIT["Meter",1.0]]</srsEPSG>
+    <GDALWarp>C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe</GDALWarp>
+    <CSVCellSize>1</CSVCellSize>
+    <RasterCellSize>0.25</RasterCellSize>
+    <ElevationIncrement>0.1</ElevationIncrement>
+    <ElevationBenchmark>8000</ElevationBenchmark>
+    <ResampleMethod>linear</ResampleMethod>
+    <ReUseRasters>False</ReUseRasters>
+    <SectionTypes>
+      <Section id="9" title="Channel" />
+      <Section id="10" title="Eddy - Single" />
+      <Section id="13" title="Eddy - Separation" />
+      <Section id="14" title="Eddy - Reattachment" />
+    </SectionTypes>
+    <AnalysisBins>
+      <Bin id="1" title="Below 8K" lower="" upper="8000" />
+      <Bin id="2" title="8k to 25k" lower="8000" upper="25000" />
+      <Bin id="3" title="Above 25k" lower="25000" upper="" />
+    </AnalysisBins>
+    <Sites>
+      <Site code5="0003L" code4="003L" stagedisa="919.534" stagedisb="0.000173" stagedisc="-1.48E-09" id="1">
+        <Surveys>
+          <Survey date="2019-10-05" id="1806" analysis="True" minimum="True">
+            <Sections>
+              <Section id="5404" sectiontypeid="10" sectiontype="Eddy - Single" uncertainty="0" />
+            </Sections>
+          </Survey>
+          <Survey date="2018-09-26" id="1792" analysis="True" minimum="True">
+            <Sections>
+              <Section id="5387" sectiontypeid="10" sectiontype="Eddy - Single" uncertainty="0" />
+            </Sections>
+          </Survey>
+          <Survey date="2017-09-30" id="1677" analysis="True" minimum="True">
+            <Sections>
+              <Section id="5256" sectiontypeid="10" sectiontype="Eddy - Single" uncertainty="0" />
+            </Sections>
+          </Survey>
+        </Surveys>
+      </Site>
+    </Sites>
+  </Inputs>
+</SandbarAnalysis>

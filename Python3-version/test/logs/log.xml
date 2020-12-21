@@ -1,0 +1,303 @@
+<?xml version="1.0" ?>
+<sandbar>
+	<metadata>
+		<analysisfolder>./test</analysisfolder>
+		<Meta Name="date">2020-11-23T23:31:14.5419675-07:00</Meta>
+		
+    
+		<Meta Name="system">testing</Meta>
+		
+    
+		<Meta Name="user">testing</Meta>
+		
+    
+		<Meta Name="version">1</Meta>
+		
+  
+		<log>log.xml</log>
+		<binnedresults>results_binned.csv</binnedresults>
+		<incrementalresults>results_incremental.csv</incrementalresults>
+		<toplevelfolder>./test/corgrids</toplevelfolder>
+		<compextentshppath>./test/ComputationExtents.shp</compextentshppath>
+		<srsepsg>PROJCS[&quot;NAD_1983_2011_StatePlane_Arizona_Central_FIPS_0202&quot;,GEOGCS[&quot;GCS_NAD_1983_2011&quot;,DATUM[&quot;NAD_1983_2011&quot;,SPHEROID[&quot;GRS_1980&quot;,6378137.0,298.257222101]],PRIMEM[&quot;Greenwich&quot;,0.0],UNIT[&quot;Degree&quot;,0.0174532925199433]],PROJECTION[&quot;Transverse_Mercator&quot;],PARAMETER[&quot;false_easting&quot;,213360.0],PARAMETER[&quot;false_northing&quot;,0.0],PARAMETER[&quot;central_meridian&quot;,-111.9166666666667],PARAMETER[&quot;scale_factor&quot;,0.9999],PARAMETER[&quot;latitude_of_origin&quot;,31.0],UNIT[&quot;Meter&quot;,1.0]]</srsepsg>
+		<gdalwarp>C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe</gdalwarp>
+		<csvcellsize>1.0</csvcellsize>
+		<rastercellsize>0.25</rastercellsize>
+		<elevationincrement>0.1</elevationincrement>
+		<elevationbenchmark>8000.0</elevationbenchmark>
+		<resamplemethod>linear</resamplemethod>
+		<reuserasters>False</reuserasters>
+		<Section id="9" title="Channel"/>
+		
+      
+		<Section id="10" title="Eddy - Single"/>
+		
+      
+		<Section id="13" title="Eddy - Separation"/>
+		
+      
+		<Section id="14" title="Eddy - Reattachment"/>
+		
+    
+		<Bin id="1" title="Below 8K" lower="" upper="8000"/>
+		
+      
+		<Bin id="2" title="8k to 25k" lower="8000" upper="25000"/>
+		
+      
+		<Bin id="3" title="Above 25k" lower="25000" upper=""/>
+		
+    
+		<Site code5="0003L" code4="003L" stagedisa="919.534" stagedisb="0.000173" stagedisc="-1.48E-09" id="1">
+			
+        
+			<Surveys>
+				
+          
+				<Survey date="2019-10-05" id="1806" analysis="True" minimum="True">
+					
+            
+					<Sections>
+						
+              
+						<Section id="5404" sectiontypeid="10" sectiontype="Eddy - Single" uncertainty="0"/>
+						
+            
+					</Sections>
+					
+          
+				</Survey>
+				
+          
+				<Survey date="2018-09-26" id="1792" analysis="True" minimum="True">
+					
+            
+					<Sections>
+						
+              
+						<Section id="5387" sectiontypeid="10" sectiontype="Eddy - Single" uncertainty="0"/>
+						
+            
+					</Sections>
+					
+          
+				</Survey>
+				
+          
+				<Survey date="2017-09-30" id="1677" analysis="True" minimum="True">
+					
+            
+					<Sections>
+						
+              
+						<Section id="5256" sectiontypeid="10" sectiontype="Eddy - Single" uncertainty="0"/>
+						
+            
+					</Sections>
+					
+          
+				</Survey>
+				
+        
+			</Surveys>
+			
+      
+		</Site>
+		
+    
+	</metadata>
+	<log>
+		<message severity="debug" time="2020-12-18T13:47:50" method="Program">
+			<description>'Config file'
+              {'AnalysisBins': &lt;Element 'AnalysisBins' at 0x0000025AFA0CE090&gt;,
+               'AnalysisFolder': './test',
+               'BinnedResults': 'results_binned.csv',
+               'CSVCellSize': 1.0,
+               'CompExtentShpPath': './test/ComputationExtents.shp',
+               'ElevationBenchmark': 8000.0,
+               'ElevationIncrement': 0.1,
+               'GDALWarp': 'C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe',
+               'IncrementalResults': 'results_incremental.csv',
+               'Log': 'log.xml',
+               'MetaData': &lt;Element 'MetaData' at 0x0000025AFA0C3590&gt;,
+               'RasterCellSize': 0.25,
+               'ReUseRasters': False,
+               'ResampleMethod': 'linear',
+               'SectionTypes': &lt;Element 'SectionTypes' at 0x0000025AFA0C3E00&gt;,
+               'Sites': &lt;Element 'Sites' at 0x0000025AFA0CE1D0&gt;,
+               'TopLevelFolder': './test/corgrids',
+               'srsEPSG': 'PROJCS[&quot;NAD_1983_2011_StatePlane_Arizona_Central_FIPS_0202&quot;,GEOGCS[&quot;GCS_NAD_1983_2011&quot;,DATUM[&quot;NAD_1983_2011&quot;,SPHEROID[&quot;GRS_1980&quot;,6378137.0,298.257222101]],PRIMEM[&quot;Greenwich&quot;,0.0],UNIT[&quot;Degree&quot;,0.0174532925199433]],PROJECTION[&quot;Transverse_Mercator&quot;],PARAMETER[&quot;false_easting&quot;,213360.0],PARAMETER[&quot;false_northing&quot;,0.0],PARAMETER[&quot;central_meridian&quot;,-111.9166666666667],PARAMETER[&quot;scale_factor&quot;,0.9999],PARAMETER[&quot;latitude_of_origin&quot;,31.0],UNIT[&quot;Meter&quot;,1.0]]'}</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:47:51" method="Program">
+			<description>Starting Sandbar script with: input_xml: ./test/input.xml</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:47:53" method="Load Sections">
+			<description>4 section types loaded from the input XML file.</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:47:54" method="Load Bins">
+			<description>3 analysis bins loaded from the input XML file.</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:47:55" method="Load Bins">
+			<description>'Analysis Bins:'
+              {1: AnalysisBin: 1 - Below 8K lower: None upper: 8000.0,
+               2: AnalysisBin: 2 - 8k to 25k lower: 8000.0 upper: 25000.0,
+               3: AnalysisBin: 3 - Above 25k lower: 25000.0 upper: None}
+              'original Element:'
+              &lt;Element 'AnalysisBins' at 0x0000025AFA0CE090&gt;</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:47:57" method="Load Sandbars">
+			<description>1 sandbar sites loaded from input XML.</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:47:58" method="Load Sandbars">
+			<description>3 total surveys loaded from the input XML. 3 for analysis and 3 for minimum surface.</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:02" method="Comp. Extents">
+			<description>('Found SRS: PROJCS[&quot;NAD83(2011) / Arizona '
+               'Central&quot;,GEOGCS[&quot;NAD83(2011)&quot;,DATUM[&quot;NAD83_National_Spatial_Reference_System_2011&quot;,SPHEROID[&quot;GRS '
+               '1980&quot;,6378137,298.257222101,AUTHORITY[&quot;EPSG&quot;,&quot;7019&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;1116&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;6318&quot;]],PROJECTION[&quot;Transverse_Mercator&quot;],PARAMETER[&quot;latitude_of_origin&quot;,31],PARAMETER[&quot;central_meridian&quot;,-111.916666666667],PARAMETER[&quot;scale_factor&quot;,0.9999],PARAMETER[&quot;false_easting&quot;,213360],PARAMETER[&quot;false_northing&quot;,0],UNIT[&quot;metre&quot;,1,AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],AXIS[&quot;Easting&quot;,EAST],AXIS[&quot;Northing&quot;,NORTH],AUTHORITY[&quot;EPSG&quot;,&quot;6404&quot;]]')</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:48:03" method="Comp. Extents">
+			<description>Computational boundaries polygon ShapeFile loaded containing 95 features.</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:48:04" method="Comp. Extents">
+			<description>Computation extents ShapeFile confirmed to contain at least one polygon for all 1 sandbar site(s) loaded.</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:48:05" method="Raster Prep">
+			<description>Site 0003L: Starting raster preparation...</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:10" method="unionCSVExtents">
+			<description>('Uncorrected extent for 3 delimited files is (240079.0, 240119.0, 647862.0, '
+               '647958.0)')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:11" method="unionCSVExtents">
+			<description>('Corrected extent for 3 delimited files is (240068.5, 240129.5, 647851.5, '
+               '647968.5)')</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:48:12" method="Sandbar Site">
+			<description>Site 0003L: Unioned extent for 3 surveys is (240068.5, 240129.5, 647851.5, 647968.5)</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:48:13" method="Sandbar Site">
+			<description>Site 0003L: Generating 3 rasters with 61 cols, 117 rows at 0.25m cell size...</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:15" method="Raster">
+			<description>'Resampling original data from 1.0m to 0.25m using linear method'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:16" method="Raster">
+			<description>'Successfully Resampled Raster'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:21" method="Delete Raster">
+			<description>('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Unclipped\\0003L_20191005_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:22" method="Raster">
+			<description>'Finished Writing Raster: ./test\\0003L\\DEMs_Unclipped\\0003L_20191005_dem.tif'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:25" method="Raster">
+			<description>'Resampling original data from 1.0m to 0.25m using linear method'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:26" method="Raster">
+			<description>'Successfully Resampled Raster'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:31" method="Delete Raster">
+			<description>('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Unclipped\\0003L_20180926_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:33" method="Raster">
+			<description>'Finished Writing Raster: ./test\\0003L\\DEMs_Unclipped\\0003L_20180926_dem.tif'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:35" method="Raster">
+			<description>'Resampling original data from 1.0m to 0.25m using linear method'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:37" method="Raster">
+			<description>'Successfully Resampled Raster'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:42" method="Delete Raster">
+			<description>('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Unclipped\\0003L_20170930_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:43" method="Raster">
+			<description>'Finished Writing Raster: ./test\\0003L\\DEMs_Unclipped\\0003L_20170930_dem.tif'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:50" method="Delete Raster">
+			<description>'Raster Successfully Deleted: ./test\\0003L\\0003L_min_surface.tif'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:51" method="Raster">
+			<description>'Finished Writing Raster: ./test\\0003L\\0003L_min_surface.tif'</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:58" method="Delete Raster">
+			<description>('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20191005_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:48:58" method="Clip Raster">
+			<description>('RUNNING GdalWarp: '
+               'C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe '
+               '-cutline ./test/ComputationExtents.shp -cwhere &quot;(&quot;Site&quot; =\'0003L\')  AND '
+               '(&quot;Section&quot;=\'Eddy\')&quot; ./test\\0003L\\DEMs_Unclipped\\0003L_20191005_dem.tif '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20191005_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:49:11" method="Delete Raster">
+			<description>('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20180926_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:49:12" method="Clip Raster">
+			<description>('RUNNING GdalWarp: '
+               'C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe '
+               '-cutline ./test/ComputationExtents.shp -cwhere &quot;(&quot;Site&quot; =\'0003L\')  AND '
+               '(&quot;Section&quot;=\'Eddy\')&quot; ./test\\0003L\\DEMs_Unclipped\\0003L_20180926_dem.tif '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20180926_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:49:22" method="Delete Raster">
+			<description>('Raster Successfully Deleted: '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20170930_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:49:23" method="Clip Raster">
+			<description>('RUNNING GdalWarp: '
+               'C:/Users/rl587/Anaconda3/envs/workbench_py3_/Library/bin/gdalwarp.exe '
+               '-cutline ./test/ComputationExtents.shp -cwhere &quot;(&quot;Site&quot; =\'0003L\')  AND '
+               '(&quot;Section&quot;=\'Eddy\')&quot; ./test\\0003L\\DEMs_Unclipped\\0003L_20170930_dem.tif '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20170930_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:27" method="Sandbar Site">
+			<description>Site 0003L: Clipped 3 rasters across 3 surveys and 3 sections defined</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:28" method="Raster Prep">
+			<description>Site 0003L: Raster preparation is complete. Elevation at 8K is 920.820 and 25K is 922.930</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:29" method="Raster Prep">
+			<description>Raster preparation is complete for all 1 sites.</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:30" method="Inc. Analysis">
+			<description>Starting incremental analysis...</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:31" method="Inc. Analysis">
+			<description>Incremental analysis on site 0003L with 3 surveys.</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:49:32" method="Inc. Analysis">
+			<description>('Incremental on site 0003L, survey 2019-10-05, Eddy - Single '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20191005_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:49:38" method="Inc. Analysis">
+			<description>('Incremental on site 0003L, survey 2018-09-26, Eddy - Single '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20180926_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="debug" time="2020-12-18T13:49:40" method="Inc. Analysis">
+			<description>('Incremental on site 0003L, survey 2017-09-30, Eddy - Single '
+               './test\\0003L\\DEMs_Clipped\\Eddy_Single\\0003L_20170930_Eddy_Single_dem.tif')</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:43" method="Inc. Analysis">
+			<description>Incremental analysis complete. Writing 137 results to ./test\results_incremental.csv</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:45" method="Binned Analysis">
+			<description>Starting binned analysis...</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:46" method="Binned Analysis">
+			<description>Binned analysis on site 0003L with 3 surveys.</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:48" method="Binned Analysis">
+			<description>Binned analysis complete. Writing 9 results to ./test\results_binned.csv</description>
+		</message>
+		<message severity="info" time="2020-12-18T13:49:50" method="Initializing">
+			<description>Sandbar analysis process complete.</description>
+		</message>
+	</log>
+</sandbar>

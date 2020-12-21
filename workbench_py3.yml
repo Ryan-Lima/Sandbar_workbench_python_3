@@ -1,0 +1,34 @@
+name: workbench_py3
+channels:
+  - conda-forge/label/cf202003
+  - conda-forge
+  - defaults
+dependencies:
+  - affine
+  - gdal=3.0
+  - git
+  - ipykernel
+  - ipython
+  - ipython_genutils
+  - jupyter_client
+  - jupyter_core
+  - jupyterlab
+  - jupyterlab_pygments
+  - jupyterlab_server
+  - pandas
+  - pickleshare
+  - pip
+  - pillow
+  - python=3.8
+  - pytz
+  - rasterio
+  - scikit-image
+  - scikit-learn
+  - scipy
+  - seaborn
+  - seaborn-base
+  - sqlite 
+  - pip:
+    - pyqt5-sip
+    - pyqtwebengine
+
